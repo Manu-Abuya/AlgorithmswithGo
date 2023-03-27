@@ -8,11 +8,10 @@ func Sum(numbers []int) int {
 		total = total + val
 	}
 	return total
-}
 
-
-// Recursive
-if len(numbers) == {
-	return 0
+	// Recursive
+	if len(numbers) == 0 {
+		return 0
+	}
+	return numbers[0] + Sum(numbers[1:])
 }
-return numbers[0] + Sum(numbers[1:])
