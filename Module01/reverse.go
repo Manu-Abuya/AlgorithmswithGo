@@ -1,10 +1,12 @@
 package module01
 
+import "strings"
+
 // This will return the provided word in reverse order
 func Reverse(word string) string {
-	var res string
+	var sb strings.Builder
 	for i := len(word) - 1; i >= 0; i-- {
-		res = res + string(word[i])
+		sb.WriteByte(word[i])
 	}
-	return res
+	return sb.String()
 }
